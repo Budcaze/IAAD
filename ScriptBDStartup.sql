@@ -69,13 +69,16 @@ insert into Programador_Linguagem (id_programador, id_linguagem) values
     
     
 alter table Programador
-add foreign key(id_startup) references startup(id_startup);
+add foreign key(id_startup) references startup(id_startup)
+on delete cascade on update cascade;
 
 alter table Programador_Linguagem
-add foreign key(id_programador) references programador(id_programador);
+add foreign key(id_programador) references programador(id_programador)
+on delete cascade on update cascade;
 
 alter table Programador_Linguagem
-add foreign key(id_linguagem) references linguagem_programação(id_linguagem);
+add foreign key(id_linguagem) references linguagem_programação(id_linguagem)
+on delete cascade on update cascade;
 
 
 
