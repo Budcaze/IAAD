@@ -29,7 +29,8 @@ create table if not exists Programador(
 
 create table if not exists Programador_Linguagem(
 		id_programador int,
-        id_linguagem int 
+        id_linguagem int,
+	primary key(id_programador, id_linguagem)
 );
 
 insert into startup (id_startup, nome_startup, cidade_sede) values 
